@@ -1,15 +1,15 @@
-#Android Studio下打包aidl到jar包（图解）
+# Android Studio下打包aidl到jar包（图解）
 
-#####新建module，则build.gradle首行为`apply plugin: 'com.android.library'`
+##### 新建module，则build.gradle首行为`apply plugin: 'com.android.library'`
 
 ![](https://upload-images.jianshu.io/upload_images/9601136-a381756d35ea4c65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 
-#####添加aidl文件
+##### 添加aidl文件
 
 ![](https://upload-images.jianshu.io/upload_images/9601136-230628ac19eb9cde.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-#####在build.gradle末尾添加如下代码
+##### 在build.gradle末尾添加如下代码
 
 ```
 // Automatic calculation of version number based date: 2018-11-16 <==> 2.4.0 (240)
@@ -40,17 +40,17 @@ task makeJar(type: Copy) {
 makeJar.dependsOn(build)
 ```
 
-#####在Android Studio窗口右上点击`Gradle`，双击`other`下的`makeJar`
+##### 在Android Studio窗口右上点击`Gradle`，双击`other`下的`makeJar`
 ![](https://upload-images.jianshu.io/upload_images/9601136-aae77b2870c417fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/9601136-011a4bfd4fae2e5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#####生成的jar包如下所示，包含aidl对应的.class字节码文件
+##### 生成的jar包如下所示，包含aidl对应的.class字节码文件
 
 ![](https://upload-images.jianshu.io/upload_images/9601136-674afdfafc83de22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-步骤已截图，代码非截图，可直接copy
-[简书地址](https://www.jianshu.com/p/c019b7a7e71f)
+步骤已截图，代码非截图，可直接copy 
+[简书地址](https://www.jianshu.com/p/c019b7a7e71f)  
 欢迎点赞，万分感谢
 
 
